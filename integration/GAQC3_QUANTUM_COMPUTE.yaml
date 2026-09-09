@@ -1,0 +1,22 @@
+schema: ghost-atlas.integration.gaqc3/v1
+consumer: Atlas-Ascend/SECA
+provider:
+  organ_id: GAQC-3.0
+  canonical_name: Ghost Atlas Quantum Computer
+  repository: Atlas-Ascend/Ghost-Atlas-Research-Institute
+  path: labs/gaqc3
+verification_inputs:
+  - quantum-job
+  - circuit-digest
+  - backend-identity
+  - calibration-digest
+  - measurement-result
+  - execution-class
+  - proof-receipt
+verification_outputs: [PASS, FAIL, INCONCLUSIVE, REPRODUCE]
+truth_rules:
+  simulation_is_not_physical_qpu: true
+  physical_qpu_requires_authenticated_provider_job_id: true
+  physical_qpu_requires_calibration_identity: true
+  physical_qpu_requires_measurement_evidence: true
+  independent_reproduction_required_for_promoted_physical_claim: true
