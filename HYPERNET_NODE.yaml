@@ -1,0 +1,40 @@
+schema: ghost-atlas.hypernet.node/v1
+node_id: seca
+repository: Atlas-Ascend/SECA
+organism_root: Atlas-Ascend/VISHVARUPA-Software-Hardware-Organism
+version: 0.1.0
+lifecycle: active-candidate
+plane: verification-security-observability
+canonical_role: independent-quality-verification-organ
+authority:
+  owns:
+    - quality-verdicts
+    - evidence-class-validation
+    - build-finish-truth
+    - audit-receipts
+  does_not_own:
+    - executive-authorization
+    - security-quarantine
+    - runtime-observation
+    - self-certification-of-builders
+upstream:
+  - Atlas-Ascend/Ghost-Atlas-Software-Factory-End-to-End-SDLC-Control-Plane
+  - Atlas-Ascend/VULCAN-Agentic-Engineering-Foundry
+  - Atlas-Ascend/DEVOS
+  - Atlas-Ascend/PROMETHEUS-V-1.1.1
+downstream:
+  - Atlas-Ascend/Ghost-Atlas-Release-Deployment-Control-Plane
+  - Atlas-Ascend/thoth-archive-engine
+  - Atlas-Ascend/Janus-Prime
+integration:
+  packet_os: Atlas-Ascend/Packet-OS
+  workforce: Atlas-Ascend/workforce-spine
+  events: Atlas-Ascend/Ghost-Atlas-Estate-Event-Gateway
+  observatory: Atlas-Ascend/Ghost-Atlas-Runtime-Observatory
+  security: Atlas-Ascend/Medusa-Sovereign-Security
+failure_route:
+  repair: Atlas-Ascend/PROMETHEUS-V-1.1.1
+proof:
+  runtime_state: unverified
+  repository_presence_is_not_runtime_proof: true
+  physical_claims_require_live_receipts: true
