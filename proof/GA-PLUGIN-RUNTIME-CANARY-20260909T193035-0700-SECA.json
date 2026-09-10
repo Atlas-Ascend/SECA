@@ -1,0 +1,18 @@
+{
+  "event_id": "GA-PLUGIN-RUNTIME-CANARY-20260909T193035-0700",
+  "packet_id": "PKT-GA-PLUGIN-RUNTIME-001",
+  "correlation_id": "COR-GA-PLUGIN-RUNTIME-001",
+  "verification_organ": "SECA",
+  "subject": "Atlas-Ascend/Packet-OS/proof/GA-PLUGIN-RUNTIME-CANARY-20260909T193035-0700.json",
+  "subject_blob_sha": "dfa39cc7fd026053183b173c7584053b193496dd",
+  "github_write_commit": "f752b37c2c7a8c065d004327294f0fad2a07792b",
+  "checks": [
+    {"check":"packet identity and correlation present","result":"PASS"},
+    {"check":"connected provider read probes executed","result":"PASS"},
+    {"check":"bounded GitHub write produced immutable commit evidence","result":"PASS"},
+    {"check":"terminal success requires evidence refs","result":"PASS"},
+    {"check":"no unsupported claim that unprovisioned providers executed","result":"PASS"}
+  ],
+  "disposition": "PASSED",
+  "evidence_class": "INDEPENDENT_REPOSITORY_VERIFICATION_RECEIPT"
+}
