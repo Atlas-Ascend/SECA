@@ -1,0 +1,29 @@
+{
+  "schema": "ghost-atlas.seca.osiris-recovery-verdict.v1",
+  "recovery_id": "RECOVERY-ID",
+  "checkpoint_id": "THOTH-CHECKPOINT-ID",
+  "packet_id": "PACKET-ID",
+  "authorization_ref": "JANUS-AUTHORIZATION",
+  "target": "RECOVERY-TARGET",
+  "executor": "EXECUTOR",
+  "verifier": "SECA",
+  "checks": {
+    "checkpoint_lineage": "PENDING",
+    "authorization": "PENDING",
+    "bounded_execution": "PENDING",
+    "observed_result": "PENDING",
+    "security_boundary": "PENDING",
+    "failed_state_preserved": "PENDING",
+    "proofgrid": "PENDING",
+    "memory_closure": "PENDING"
+  },
+  "verdict": "PENDING",
+  "evidence_refs": [],
+  "proofgrid_receipt": null,
+  "thoth_post_checkpoint": null,
+  "truth_boundary": {
+    "executor_self_certification_allowed": false,
+    "missing_evidence_can_pass": false,
+    "failed_lineage_may_be_erased": false
+  }
+}

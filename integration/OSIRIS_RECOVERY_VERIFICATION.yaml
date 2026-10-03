@@ -1,0 +1,46 @@
+schema: ghost-atlas.seca.osiris-recovery-verification/v1
+event: GA-HYPERNET-THOTH-OSIRIS-81-20261003
+role: OSIRIS-RECOVERY
+authority:
+  verifier: SECA
+  executor_may_self_verify: false
+inputs:
+  required:
+    - recovery_id
+    - checkpoint_id
+    - packet_id
+    - authorization_ref
+    - recovery_target
+    - execution_receipt
+    - observation_receipt
+    - security_verdict
+verification:
+  checks:
+    - id: checkpoint-lineage
+      assert: pre_recovery_thoth_checkpoint_exists
+    - id: authorization
+      assert: janus_authorization_matches_packet
+    - id: bounded-execution
+      assert: action_matches_authorized_target_and_scope
+    - id: observed-result
+      assert: post_action_observation_supports_claim
+    - id: security-boundary
+      assert: medusa_heimdall_not_denied_or_quarantined
+    - id: failed-state-preserved
+      assert: recovery_does_not_erase_prior_failure_lineage
+    - id: proofgrid
+      assert: proofgrid_receipt_is_attributable
+    - id: memory-closure
+      assert: post_recovery_thoth_checkpoint_exists
+outputs:
+  pass_event: recovery.verification.passed
+  fail_event: recovery.verification.failed
+  evidence_class: VERIFICATION
+  handoff_on_pass: [ProofGrid, Thoth, Runtime-Observatory]
+  handoff_on_fail: [PROMETHEUS, DEVOS, JANUS-PRIME, Thoth]
+laws:
+  - NO_SELF_CERTIFICATION
+  - EVIDENCE_BEFORE_PASS
+  - OBSERVATION_NOT_EQUAL_CLAIM
+  - FAILED_STATE_PRESERVED
+  - NO_REPLACEMENT_BUILD
