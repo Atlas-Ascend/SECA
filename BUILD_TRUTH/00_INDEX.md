@@ -16,3 +16,7 @@
 14_DEPLOYMENT_RUNTIME_AND_INFRASTRUCTURE.md
 15_PROOF_ACCEPTANCE_AND_RECEIPTS.md
 16_ROADMAP_CANON_AND_SUPERSESSION.md
+
+## Active audit register
+
+- `AUDITS/GA-SECA-ESTATE-DEPENDENCY-IO-AUDIT-001.md` — 2026-11-19 cross-organ dependency, nervous-system event circulation, cardiovascular/I-O routing, health, recovery and proof audit. Source-contract audit; live end-to-end status remains INCONCLUSIVE until the declared gates pass.
